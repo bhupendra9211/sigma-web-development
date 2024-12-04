@@ -4,3 +4,11 @@ body{
 td{
     border: 2px solid black;
 }
+div{
+    background-color: beige;
+}
+video{
+    border: 2 px solid red;
+    border-radius: 444px;
+    background-color: aqua;
+}
