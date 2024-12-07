@@ -1,5 +1,7 @@
-body{
-    background-color: palegreen;
+
+*{
+    margin: 0px;
+    padding: 0px;
 }
 td{
     border: 2px solid black;
@@ -8,7 +10,22 @@ div{
     background-color: beige;
 }
 video{
-    border: 2 px solid red;
+    border: 2px solid red;
     border-radius: 444px;
     background-color: aqua;
+}
+.box{
+    border: 2px solid red;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+}
+.box1{
+    background-color: yellow;
+    padding: 10px;
+    margin: 10px;
+}
+.box2{
+    margin: 30px;
+    background-color: green;
 }
