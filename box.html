@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .box{
+            border-radius: 10px;
+            width: 400px;
+            height: 500px;
+            border: 1px solid rgb(204, 194, 174);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 4px 4px 7px #8d9fa5;
+            padding: 20px;
+        }
+        img{
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 250px;
+        }
+        .pillbottom{
+            margin-top: 10px;
+        }
+        .hello{
+            background-color: antiquewhite;
+            border: 1px solid silver;
+            border-radius: 10px;
+            text-align: center;
+            display: inline-block;
+            width: 50px;
+        }
+
+        .greate{
+
+            background-color: antiquewhite;
+            border: 1px solid silver;
+            border-radius: 10px;
+            text-align: center;
+            display: inline-block;
+            width: 50px;
+        }
+        h2{
+            margin-top: 10px;
+        }
+        .lorem{
+            margin-top: 10px;
+        }
+        .readme{
+            display: inline-block;
+            border: 1px solid black;
+            text-align: center;
+            width: 100px;
+            border-radius: 10px;
+            padding: 5px;
+            background-color: aliceblue;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="picture">
+                <img src="image.jpg" alt="" >
+            </div>
+            <div class="pillbottom">
+                <span class="hello">hello</span>
+                <span class="greate">greate</span>
+            </div>
+            <h2>
+                This is my Card
+            </h2>
+            <p class="lorem">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit qui dicta sed unde cupiditate harum quos deserunt architecto, dignissimos consequatur mollitia.
+            </p>
+            <div class="readme">
+                Read More
+            </div>
+        </div>
+    </div>
+</body>
+</html>
