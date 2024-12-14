@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variable</title>
+    <style>
+        :root {
+            --blue: #c5cfda;
+          }
+        ul li{
+            list-style: none;
+        }
+        .nav ul{
+            background-color: var(--blue);
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            justify-items: flex-start;
+            border-radius: 10px;
+        }
+        .nav ul li{
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>Info</li>
+        </ul>
+    </div>
+</body>
+</html>
