@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+    <style>
+        .container{
+            box-sizing: border-box;
+            height: 100vh;
+            border: 1px solid red;
+            display: grid;
+            grid-template-areas: "header header header"
+                                 "side article article"
+                                 "footer footer footer";
+            grid-template-rows: 60px 1fr 60px;
+            gap: 10px;
+        }
+        .item{
+            border: 1px solid black;
+            background-color: #a78282;
+            text-align: center;
+        }
+        .item1{
+            background-color: aliceblue;
+            grid-area: header;
+        }
+        .item2{
+            border-radius: 10px;
+            background-color: aqua;
+            grid-area: side;
+        }
+        .item3{
+            border-radius: 10px;
+            background-color: rgb(120, 229, 229);
+            grid-area: article;
+        }
+        .item4{
+            background-color: rgb(148, 121, 173);
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">header</div>
+        <div class="item item2">side</div>
+        <div class="item item3">article</div>
+        <div class="item item4">footer</div>
+    </div>
+</body>
+</html>
