@@ -18,13 +18,17 @@
             width: 100px;
             height: 100px;
             background-color: red;
-            animation: box 3s ease-in-out 1s infinite ;
+            animation: box 3s ease-in-out 1s infinite alternate;
         }
         @keyframes box {
-            from {
+            0% {
                 transform: translateY(0);
+                background-color: red;
             }
-            to {
+            50% {
+                background-color: blanchedalmond;
+            }
+            100% {
                 transform: translateY(calc(80vh - 100px));
                 background-color: blanchedalmond;
             }
@@ -33,7 +37,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="box"></div>
+        <!-- Apply both classes to combine the animations -->
+        <div class="box">box</div>
     </div>
 </body>
 </html>
