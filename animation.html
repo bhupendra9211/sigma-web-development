@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container {
+            background-color: aliceblue;
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid black;
+            position: relative;
+        }
+        .box {
+            position: absolute;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: box 3s ease-in-out 1s infinite ;
+        }
+        @keyframes box {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(calc(80vh - 100px));
+                background-color: blanchedalmond;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
