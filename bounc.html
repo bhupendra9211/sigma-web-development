@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container {
+            background-color: aliceblue;
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid black;
+            position: relative;
+        }
+        .box {
+            position: absolute;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
+        }
+        @keyframes animateX {
+            from {
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+        @keyframes animateY {
+            from {
+                bottom: 0;
+            }
+            to{
+                bottom:100%;
+            }
+        }
+        @keyframes box {
+            0% {
+                transform: translateY(0);
+                background-color: red;
+            }
+            50% {
+                background-color: blanchedalmond;
+            }
+            100% {
+                transform: translateY(calc(80vh - 100px));
+                background-color: blanchedalmond;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Apply both classes to combine the animations -->
+        <div class="box">box</div>
+    </div>
+</body>
+</html>
