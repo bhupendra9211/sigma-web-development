@@ -3,123 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
+  <title>Document</title>
   <style>
-    body {
+    body{
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
-      background-color: #f3f4f6;
     }
-
-    .calculator {
-      width: 300px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-    }
-
-    .display {
-      width: 100%;
-      height: 80px;
-      background: #222;
-      color: #fff;
-      font-size: 2rem;
-      text-align: right;
-      padding: 10px;
+    .container{
       box-sizing: border-box;
+      background-color: aqua;
+      width: 300px;
+      height: 50vh;
+      border: 2px solid black;
+      border-radius: 10px;
     }
-
-    .buttons {
+    .display{
+     margin-bottom: 10px;
+    }
+    .display input{
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      text-align: right;
+    }
+    .keyboard{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: #ddd;
+      gap: 5px;
     }
-
-    .buttons button {
-      height: 60px;
-      font-size: 1.5rem;
+    .keyboard button{
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
       border: none;
+      border-radius: 5px;
+      background-color: #f1f1f1;
       cursor: pointer;
-      background: #f3f4f6;
-      transition: background 0.2s;
-    }
-
-    .buttons button:hover {
-      background: #e1e5ea;
-    }
-
-    .buttons button.operator {
-      background: #f7d308;
-    }
-
-    .buttons button.operator:hover {
-      background: #e5c007;
-    }
-
-    .buttons button.clear {
-      background: #f25c54;
-      color: #fff;
-    }
-
-    .buttons button.clear:hover {
-      background: #d9433c;
     }
   </style>
 </head>
 <body>
-  <div class="calculator">
-    <div class="display" id="display">0</div>
-    <div class="buttons">
-      <button class="clear" onclick="clearDisplay()">C</button>
-      <button onclick="appendToDisplay('(')">(</button>
-      <button onclick="appendToDisplay(')')">)</button>
-      <button class="operator" onclick="appendToDisplay('/')">&divide;</button>
-      <button onclick="appendToDisplay('7')">7</button>
-      <button onclick="appendToDisplay('8')">8</button>
-      <button onclick="appendToDisplay('9')">9</button>
-      <button class="operator" onclick="appendToDisplay('*')">&times;</button>
-      <button onclick="appendToDisplay('4')">4</button>
-      <button onclick="appendToDisplay('5')">5</button>
-      <button onclick="appendToDisplay('6')">6</button>
-      <button class="operator" onclick="appendToDisplay('-')">&minus;</button>
-      <button onclick="appendToDisplay('1')">1</button>
-      <button onclick="appendToDisplay('2')">2</button>
-      <button onclick="appendToDisplay('3')">3</button>
-      <button class="operator" onclick="appendToDisplay('+')">+</button>
-      <button onclick="appendToDisplay('0')">0</button>
-      <button onclick="appendToDisplay('.')">.</button>
-      <button onclick="calculateResult()">=</button>
+  <div class="container">
+    <div class="display">
+      <input type="text" disabled>
+    </div>
+    <div class="keyboard">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>+</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>-</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>*</button>
+      <button>0</button>
+      <button>/</button>
+      <button>C</button>
+      <button>=</button>
     </div>
   </div>
-
-  <script>
-    const display = document.getElementById('display');
-
-    function appendToDisplay(value) {
-      if (display.innerText === '0') {
-        display.innerText = value;
-      } else {
-        display.innerText += value;
-      }
-    }
-
-    function clearDisplay() {
-      display.innerText = '0';
-    }
-
-    function calculateResult() {
-      try {
-        display.innerText = eval(display.innerText);
-      } catch (error) {
-        display.innerText = 'Error';
-      }
-    }
-  </script>
 </body>
 </html>
