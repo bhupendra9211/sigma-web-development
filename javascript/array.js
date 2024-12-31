@@ -55,3 +55,7 @@ let reduced_array = numbers.reduce((element => {
     return element+element
 }))
 console.log(reduced_array);
+
+let user = "bhupendra";
+
+console.log(Array.from(user));
