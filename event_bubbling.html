@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubbling</title>
+    <style>
+        .child{
+            border:1px solid red;
+            margin:4px;
+            padding:5px;
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+        .parent{
+            border:1px solid blue;
+            margin:4px;
+            padding:5px;
+            background-color: aqua;
+        }
+        .grandparent{
+            background-color: bisque;
+            border:1px solid green;
+            margin:4px;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child" id="child">
+                this is child 
+            </div>
+        </div>
+    </div>
+    <script src="javascript/event_bublling.js"></script>
+</body>
+</html>
