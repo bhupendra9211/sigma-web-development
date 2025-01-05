@@ -54,5 +54,23 @@ console.log("this is all about promises");
 //     console.log(data);
 // })
 
+let step1 = new Promise((resolve) => {
+    setTimeout(() => resolve("Step 1 complete"), 1000);
+  });
+  
+  step1
+    .then((message1) => {
+      console.log(message1);
+      return "Step 2 complete";
+    })
+    .then((message2) => {
+      console.log(message2);
+      return "Step 3 complete";
+    })
+    .then((message3) => {
+      console.log(message3);
+    });
+  
+
   
 
