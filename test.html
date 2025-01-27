@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="first" name="first" placeholder="Enter first number">
+        <br>
+        <br>
+        <br>
+        <input type="text" id="second" placeholder="Enter second number">
+        <br>
+        <div class="display">
+            <h1>Result</h1>
+            <p id="result"></p>
+        </div>
+        <button onclick="add()">Add</button>
+    </div>
+</body>
+<script>
+    function add() {
+        var first = document.getElementById('first').value;
+        var second = document.getElementById('second').value;
+        var result = parseInt(first) + parseInt(second);
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+</html>

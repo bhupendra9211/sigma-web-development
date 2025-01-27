@@ -1,11 +1,11 @@
 console.log("events,event_bubbling,setInterval and setTimeout")
 
-// let btn = document.getElementById("btn")
-// btn.addEventListener("click",()=>{
-//     document.querySelector(".box").innerHTML = "you change the text";
-//     document.querySelector(".box").classList.toggle("red_box");
-//     // alert("you clicked");
-// })
+let btn = document.getElementById("btn")
+btn.addEventListener("click",()=>{
+    document.querySelector(".box").innerHTML = "you change the text";
+    document.querySelector(".box").classList.toggle("red_box");
+    // alert("you clicked");
+})
 
 // btn.removeEventListener("click",false);
 
